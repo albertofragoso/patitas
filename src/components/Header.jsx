@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from '../images/logo.png'
 
 const Header = () => (
   <div className="Header">
     <div className="Header-container">
       <div className="Header-content">
         <div className="Header-logo">
-          Logo
+          <img className="Header-logo-img" src={logo} alt="Patitas logo" />
         </div>
         <div className="Header-nav">
           Menu
