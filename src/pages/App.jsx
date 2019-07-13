@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
+import Layout from '../components/Layout'
 
 const App = () => (
-  <h1>Patitas</h1>
-);
+  <Layout />
+)
 
-export default App;
+export default App

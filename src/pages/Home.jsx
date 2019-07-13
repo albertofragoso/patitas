@@ -4,7 +4,6 @@ const Home = () => (
   <div className="Home">
     <div className="Home-container">
       <div className="Home-items">
-
         <div className="Pets">
           <div className="Pets-cover">
             <span>🐶</span>
@@ -23,8 +22,6 @@ const Home = () => (
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
