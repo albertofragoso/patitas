@@ -3,10 +3,10 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from '../pages/Home'
 
-const Layout = props => (
+const Layout = ({ children }) => (
   <div className="Layout">
     <Header />
-    <Home />
+    {children}
     <Footer />
   </div>
 )

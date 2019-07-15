@@ -455,3 +455,7 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
+
+.Nav ul li a{
+  color: #fff!important;
+}
