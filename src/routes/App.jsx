@@ -14,7 +14,7 @@ const App = () => (
     <Layout>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/:id/mascotas" component={Pet} />
+        <Route exact path="/:id/pets" component={Pet} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route component={() => <h1 style={{ textAlign: "center" }}>404 Not found 😯</h1>} />

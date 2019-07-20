@@ -284,6 +284,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3em;
+  margin: 2rem 1rem;
 }
 .PetInfo-name {
   display: flex;
