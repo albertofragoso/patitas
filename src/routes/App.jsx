@@ -7,6 +7,7 @@ import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
 
 import '../styles/global.css'
+import 'toastr/build/toastr.css'
 
 const App = () => (
   <BrowserRouter>
