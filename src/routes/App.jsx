@@ -38,11 +38,9 @@ const App = ({ setUser, setLogin }) => {
   )
 }
 
-const mapStateToProps = state => ({ login: state.login })
-
 const mapDispatchToProps = {
   setUser,
   setLogin
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(null, mapDispatchToProps)(App)

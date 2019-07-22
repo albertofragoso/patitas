@@ -86,7 +86,10 @@ body {
   display: block;
 }
 .Login {
+  background-color: #fff;
   padding: 1em;
+  margin: 0 auto;
+  width: 420px;
   text-align: center;
 }
 .Login-container {
@@ -371,6 +374,8 @@ body {
 }
 .Modal {
   position: relative;
+  background-color: #fff;
+  color: #939ac1;
 }
 .Modal-wrapper {
   transition: all 0.8s;
@@ -422,7 +427,7 @@ body {
 }
 .Form select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;

@@ -22,7 +22,7 @@ const PetInfo = ({ pet }) => {
               </i>
             </p>
             <div className="PetInfo-type">
-              <button>
+              <button className="PetInfo-btn">
                 To adopt
               </button>
             </div>
