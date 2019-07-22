@@ -17,11 +17,10 @@ const Header = ({ login }) => {
     <div className="Header">
       <div className="Header-container">
         <div className="Header-content">
-          <div className="Header-logo">
-            <Link to="/" className="Header-logo">
-              <img className="Header-logo-img" src={logo} alt="Patitas logo" />
-            </Link>
-          </div>
+          <Link to="/"className="Header-logo">
+            <img src={logo} alt="Patitas logo" />
+            <span className="Header-logo-title">Patitas</span>
+          </Link>
           <div className="Header-nav">
             <Nav showModal={showModal}/>
           </div>

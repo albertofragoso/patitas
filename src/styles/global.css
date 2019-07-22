@@ -28,6 +28,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 130px;
+}
+.Header-logo-title {
+  font-size: 1.5rem;
+  color: #fff;
 }
 .Header h1 {
   font-size: 1em;
@@ -351,7 +356,7 @@ body {
 }
 .Footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .Footer h2 {
