@@ -12,7 +12,8 @@ const Home = () => {
       <div className="Home-container">
         <div className="Home-items">
           { pets.map((pet, index) =>
-            <Link 
+            <Link
+              key={`${pet.name}-${index}`}
               style={{textDecoration: 'none'}} 
               to={{
               pathname: `/${index}-${pet.name}/pets`,
