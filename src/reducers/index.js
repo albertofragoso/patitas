@@ -5,6 +5,11 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload
       }
+    case 'SET_LOGIN':
+      return {
+        ...state,
+        login: action.payload
+      }
     default:
       return state
   }

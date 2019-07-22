@@ -1,21 +1,17 @@
 import React from 'react'
 import { auth, provider } from '../utils/firebase'
 import { connect } from 'react-redux'
-import { setUser } from '../actions'
+import { setUser, setLogin } from '../actions'
 
-const Login = props => {
+const Login = ({ history, setUser, setLogin }) => {
 
   const loginFacebook = () => {
     auth().signInWithPopup(provider)
       .then(({ user }) => {
-        props.setUser(user)
-        props.history.push('/dashboard')
+        setUser(user)
+        setLogin(true)
+        history.push('/dashboard')
       })
-  }
-
-  const logoutFacebook = () => {
-    auth().signOut()
-      .then(() => props.history.push('/'))
   }
 
   return (
@@ -27,10 +23,6 @@ const Login = props => {
             <i className="fab fa-facebook-square" />
             <span> Login with Facebook</span>
           </button>
-          <button onClick={logoutFacebook}>
-            <i className="fab fa-facebook-square" />
-            <span> Logout</span>
-          </button>
         </div>
       </div>
     </div>
@@ -39,6 +31,7 @@ const Login = props => {
 
 const mapDispatchToProps = {
   setUser,
+  setLogin
 }
 
 export default connect(null, mapDispatchToProps)(Login)

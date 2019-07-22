@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-const Nav = () => (
+const Nav = ({ login }) => (
   <div className="Nav">
     <ul>
       <li>
@@ -11,13 +12,15 @@ const Nav = () => (
         <Link to="/pets">Adoption</Link>
       </li>
       <li>
-        <Link to="/login">Account</Link>
-      </li>
-      <li>
-        <Link to="/dashboard">Dashboard</Link>
+        {login 
+          ? <Link to="/dashboard">Dashboard</Link>
+          : <Link to="/login">Account</Link>
+        }
       </li>
     </ul>
   </div>
 )
 
-export default Nav
+const mapStateToProps = state => ({ login: state.login })
+
+export default connect(mapStateToProps)(Nav)
