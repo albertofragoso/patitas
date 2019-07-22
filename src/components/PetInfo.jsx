@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import Login from '../pages/Login'
 
-const PetInfo = ({ pet }) => {
+const PetInfo = ({ pet, login }) => {
+
+  const [adopt, setAdopt] = useState(false)
 
   return(
     <div className="PetInfo">
@@ -22,19 +26,26 @@ const PetInfo = ({ pet }) => {
               </i>
             </p>
             <div className="PetInfo-type">
-              <button className="PetInfo-btn">
+              <button onClick={() => setAdopt(!adopt)} className="PetInfo-btn">
                 To adopt
               </button>
             </div>
-            <div className="PetInfo-profile-adopt">
-              <div className="PetInfo-item">
-                <h3>Contact info:</h3>
-                <span>Owner: </span>
-                <h4>Alberto Fragoso</h4>
-                <span>Email: </span>
-                <h4>hola@albertofragoso.com</h4>
+            {adopt &&
+              <div>
+                {login 
+                ? <div className="PetInfo-profile-adopt">
+                    <div className="PetInfo-item">
+                      <h3>Contact info:</h3>
+                      <span>Owner: </span>
+                      <h4>{pet.userName}</h4>
+                      <span>Email: </span>
+                      <h4>{pet.userContact}</h4>
+                    </div>
+                  </div>
+                : <Login />
+                }
               </div>
-            </div>
+            }
           </div>
         </div>
       </div>
@@ -42,4 +53,6 @@ const PetInfo = ({ pet }) => {
   )
 }
 
-export default PetInfo
+const mapStateToProps = state => ({ login: state.login })
+
+export default connect(mapStateToProps)(PetInfo)
