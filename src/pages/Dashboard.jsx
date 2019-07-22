@@ -15,6 +15,7 @@ const Dashboard = ({ user }) => (
           <h2>Profile</h2>
           <div className="Dashborad-profile-info">
             <img src={user.photoURL} alt={user.displayName}/>
+            <br />
             <span>Name:</span>
             <h4>{user.displayName}</h4>
             <span>Email:</span>
